@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "f2h.webapi", "f2h.webapi\f2h.webapi.csproj", "{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "f2h.web", "f2h.web\f2h.web.njsproj", "{60D6FEC4-4815-4F00-B690-88E0965A9BAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D6FEC4-4815-4F00-B690-88E0965A9BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D6FEC4-4815-4F00-B690-88E0965A9BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D6FEC4-4815-4F00-B690-88E0965A9BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D6FEC4-4815-4F00-B690-88E0965A9BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {749BC1E8-7C89-4ED7-9A12-F68FA5DF0E60}
+	EndGlobalSection
+EndGlobal
