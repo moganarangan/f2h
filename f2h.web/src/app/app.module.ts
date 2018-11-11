@@ -16,13 +16,21 @@ import { library  } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { HomeComponent } from './home/home.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ViewcartComponent } from './viewcart/viewcart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ProductDetailComponent,
+    ViewcartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

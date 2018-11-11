@@ -25,6 +25,14 @@
   <ItemGroup>
     <Content Include="angular.json" />
     <Content Include="package.json" />
+    <Content Include="src\app\checkout\checkout.component.html" />
+    <Content Include="src\app\checkout\checkout.component.scss" />
+    <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\app\home\home.component.scss" />
+    <Content Include="src\app\product-detail\product-detail.component.html" />
+    <Content Include="src\app\product-detail\product-detail.component.scss" />
+    <Content Include="src\app\viewcart\viewcart.component.html" />
+    <Content Include="src\app\viewcart\viewcart.component.scss" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="README.md" />
@@ -33,6 +41,10 @@
     <Content Include="src\favicon.ico" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tslint.json" />
+    <TypeScriptCompile Include="src\app\checkout\checkout.component.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\product-detail\product-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\viewcart\viewcart.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
@@ -49,6 +61,10 @@
     <Folder Include="e2e\src" />
     <Folder Include="src" />
     <Folder Include="src\app" />
+    <Folder Include="src\app\checkout\" />
+    <Folder Include="src\app\home\" />
+    <Folder Include="src\app\product-detail\" />
+    <Folder Include="src\app\viewcart\" />
     <Folder Include="src\assets" />
     <Folder Include="src\environments" />
   </ItemGroup>
