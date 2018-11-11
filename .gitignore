@@ -6,7 +6,14 @@
 /out-tsc
 
 # dependencies
-/node_modules
+/f2h.web/node_modules
+/f2h.web/dist
+/f2h.web/tmp
+/f2h.web/out-tsc
+/f2h.web/obj
+
+/f2h.webapi/obj
+/f2h.webapi/bin
 
 # IDEs and editors
 /.idea
@@ -23,6 +30,9 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# IDE - VS
+/.vs
 
 # misc
 /.sass-cache
