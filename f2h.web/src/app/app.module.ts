@@ -22,6 +22,7 @@ import { ViewcartComponent } from './viewcart/viewcart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './search/search.component';
 
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
@@ -34,7 +35,8 @@ library.add(fab, far, fas);
     ViewcartComponent,
     CheckoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
