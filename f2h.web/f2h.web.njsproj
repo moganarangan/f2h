@@ -27,12 +27,17 @@
     <Content Include="package.json" />
     <Content Include="src\app\checkout\checkout.component.html" />
     <Content Include="src\app\checkout\checkout.component.scss" />
+    <Content Include="src\app\footer\footer.component.html" />
+    <Content Include="src\app\footer\footer.component.scss" />
+    <Content Include="src\app\header\header.component.html" />
+    <Content Include="src\app\header\header.component.scss" />
     <Content Include="src\app\home\home.component.html" />
     <Content Include="src\app\home\home.component.scss" />
     <Content Include="src\app\product-detail\product-detail.component.html" />
     <Content Include="src\app\product-detail\product-detail.component.scss" />
     <Content Include="src\app\viewcart\viewcart.component.html" />
     <Content Include="src\app\viewcart\viewcart.component.scss" />
+    <Content Include="src\styles.scss" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="README.md" />
@@ -42,6 +47,8 @@
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tslint.json" />
     <TypeScriptCompile Include="src\app\checkout\checkout.component.ts" />
+    <TypeScriptCompile Include="src\app\footer\footer.component.ts" />
+    <TypeScriptCompile Include="src\app\header\header.component.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\product-detail\product-detail.component.ts" />
     <TypeScriptCompile Include="src\app\viewcart\viewcart.component.ts" />
@@ -62,6 +69,8 @@
     <Folder Include="src" />
     <Folder Include="src\app" />
     <Folder Include="src\app\checkout\" />
+    <Folder Include="src\app\footer\" />
+    <Folder Include="src\app\header\" />
     <Folder Include="src\app\home\" />
     <Folder Include="src\app\product-detail\" />
     <Folder Include="src\app\viewcart\" />
