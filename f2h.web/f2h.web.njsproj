@@ -39,7 +39,8 @@
     <Content Include="src\app\search\search.component.scss" />
     <Content Include="src\app\viewcart\viewcart.component.html" />
     <Content Include="src\app\viewcart\viewcart.component.scss" />
-    <Content Include="src\assets\81608d860ed44917.jpg" />
+    <Content Include="src\assets\JiqGstEfoWAOHiTxclqi.png" />
+    <Content Include="src\assets\road220058.jpg" />
     <Content Include="src\styles.scss" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />

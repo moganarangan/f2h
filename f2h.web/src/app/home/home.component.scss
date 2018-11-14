@@ -71,7 +71,7 @@
 // From: Small screen To: Medium screen
 @media (min-width:341px) and (max-width:600px) {
   .f2h-card-item {
-    width: 150px;
+    width: 140px;
   }
 }
 
@@ -90,9 +90,10 @@
 }
 
 .f2h-home-category-container {
-  padding: 50px 0 20px;
+  margin: 30px 10px;
+  padding-bottom: 20px;
   text-align: center;
-  border-bottom: 1px solid lightgray;
+  border: 1px solid lightgray;
 }
 
 .f2h-home-category-heading {
@@ -100,11 +101,20 @@
 }
 
 .f2h-cat-heading {
+  margin-top: 8px;
   margin-left: 20px;
   display: inline-block;
 }
 
 .f2h-cat-viewall {
   float: right;
+  margin-top: 8px;
   margin-right: 20px;
+}
+
+// Upto Small screen
+@media (max-width:340px) {
+  .f2h-cat-viewall {
+    margin-right: 5px;
+  }
 }

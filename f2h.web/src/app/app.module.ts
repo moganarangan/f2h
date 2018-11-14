@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Import MDB Angular Module
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 // Import Ng Select Module
 import { NgSelectModule } from '@ng-select/ng-select';
 
@@ -52,6 +55,7 @@ library.add(fab, far, fas);
     FontAwesomeModule,
     SwiperModule,
     NgZorroAntdModule,
+    MDBBootstrapModule.forRoot(),
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot()
   ],
