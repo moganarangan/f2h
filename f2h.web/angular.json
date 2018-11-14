@@ -31,11 +31,14 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@ng-select/ng-select/themes/default.theme.css",
               "./node_modules/@ng-select/ng-select/themes/material.theme.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/swiper/dist/css/swiper.min.css",
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/swiper/dist/js/swiper.min.js"
             ]
           },
           "configurations": {

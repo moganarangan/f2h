@@ -6,6 +6,10 @@
   display: none;
 }
 
+.f2h-menubar-right {
+  margin-right: 5%;
+}
+
 .f2h-menu-close {
   margin-top: -8px;
 }
@@ -27,7 +31,7 @@ a {
 .w3-top, .w3-bottom {
   position: sticky;
   width: 100%;
-  z-index: 1
+  z-index: 5
 }
 
 .w3-top {
@@ -147,7 +151,7 @@ a {
   width: 300px;
   background-color: #fff;
   position: fixed !important;
-  z-index: 1;
+  z-index: 10;
   overflow: auto
 }
 

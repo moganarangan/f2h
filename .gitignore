@@ -11,6 +11,7 @@
 /f2h.web/tmp
 /f2h.web/out-tsc
 /f2h.web/obj
+/f2h.web/package-lock.json
 
 /f2h.webapi/obj
 /f2h.webapi/bin

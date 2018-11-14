@@ -1,9 +1,110 @@
-.carousel {
-  height: 100%;
-  width: 100%;
+.swiper-container {
+  max-width: 1200px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.carousel-item {
+@media (max-width:600px) {
+  .swiper-container {
+    height: 200px;
+  }
+}
+
+@media (max-width:320px) {
+  .swiper-container {
+    height: 100px;
+  }
+}
+
+// w3-hide-medium
+@media (max-width:900px) and (min-width:601px) {
+  .swiper-container {
+    height: 250px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.f2h-slide-image {
+  display: block;
   width: 100%;
-  height: 280px;
+  height: auto;
+  object-fit: cover;
+}
+
+.f2h-card-item {
+  display: inline-block;
+  margin-right: 5px; 
+  margin-top: 5px;
+}
+.f2h-card-item:last-child {
+  margin-right: 0;   
+}
+
+// Upto Small screen
+@media (max-width:340px) {
+  .f2h-card-item {
+    width: 120px;
+    margin-right: 10px; 
+    margin-top: 10px;
+  }
+}
+
+// From: Small screen To: Medium screen
+@media (min-width:341px) and (max-width:600px) {
+  .f2h-card-item {
+    width: 150px;
+  }
+}
+
+// From: Medium screen To: Big screen
+ @media (min-width:601px) and (max-width: 1550px) {
+   .f2h-card-item {
+     width: 200px;
+   }
+}
+
+// On bigger Screen
+@media (min-width:1551px){
+  .f2h-card-item {
+    width: 280px;
+  }
+}
+
+.f2h-home-category-container {
+  padding: 50px 0 20px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.f2h-home-category-heading {
+  text-align: left;
+}
+
+.f2h-cat-heading {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.f2h-cat-viewall {
+  float: right;
+  margin-right: 20px;
 }
