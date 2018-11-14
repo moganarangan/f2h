@@ -39,7 +39,6 @@ a {
   margin: 0 0 10px 0;
   height: 55px;
   background-color: #00bcd4 !important;
-  color: #fff !important;
 }
 
 // w3-bar
@@ -54,7 +53,7 @@ a {
   width: auto;
   border: none;
   display: block;
-  outline: 0
+  outline: 0;
 }
 
 .w3-bar .w3-dropdown-hover, .w3-bar .w3-dropdown-click {
@@ -80,7 +79,8 @@ a {
   border: none;
   white-space: normal;
   float: none;
-  outline: 0
+  outline: 0;
+  color: #000 !important;
 }
 
 .w3-bar-item {
@@ -150,7 +150,8 @@ a {
   top: 0;
   height: 100%;
   width: 180px;
-  background-color: #fff;
+  background-color: #fff !important;
+  color: #000 !important;
   position: fixed !important;
   z-index: 10;
   overflow: auto
