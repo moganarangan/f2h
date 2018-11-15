@@ -33,6 +33,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
@@ -46,7 +47,8 @@ library.add(fab, far, fas);
     CheckoutComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
