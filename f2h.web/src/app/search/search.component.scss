@@ -1,39 +1,65 @@
-.form-inline {
-  display: inline-block
+.f2h-search-container {
+  display: inline-block;
+  position: absolute;
+  margin-top: 5px;
 }
 
 
-.f2h-search {
-  margin: 6px 0 0 20px;
+.f2h-search-form {
+position: relative;
+}
+
+.f2h-search-box {
+  float: left;
   width: 400px;
+  border: 3px solid #4caf50 !important;
+  padding: 0 15px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  color: #000;
 }
 
-/*// Upto Small screen
-@media (max-width:340px) {
-  .f2h-card-item {
-    width: 120px;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
+.f2h-search-icon {
+  padding: 5px;
+  position: absolute;  
+  right: 0;
+  width: 40px;
+  text-align: center;
+  color: #4caf50 !important;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+// // Upto Small screen
+ @media (max-width:340px) {
+   .f2h-search-box {
+   width: 160px;
+ }
 }
 
 // From: Small screen To: Medium screen
-@media (min-width:341px) and (max-width:600px) {
-  .f2h-card-item {
-    width: 140px;
+  @media (min-width:341px) and (max-width:600px) {
+    .f2h-search-box {
+    width: 220px;
   }
 }
 
-// From: Medium screen To: Big screen
-@media (min-width:601px) and (max-width: 1550px) {
-  .f2h-card-item {
-    width: 200px;
-  }
-}
+//  .f2h-search-icon {
+//   right: calc(100% - 315px);
+//  }
+//  }
 
-// On bigger Screen
-@media (min-width:1551px) {
-  .f2h-card-item {
-    width: 280px;
-  }
-}*/
+// // From: Medium screen To: Big screen
+// @media (min-width:601px) and (max-width: 1550px) {
+//   .f2h-search-box {
+//   width: 400px;
+// }
+// }
+
+// // On bigger Screen
+// @media (min-width:1551px) {
+//  .f2h-search-box {
+//   width: 500px;
+//  }
+// }

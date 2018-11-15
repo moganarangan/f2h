@@ -34,13 +34,15 @@
               "./node_modules/swiper/dist/css/swiper.min.css",
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "./node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
-              "./node_modules/angular-bootstrap-md/scss/mdb-free.scss"
+              "./node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+              "./node_modules/material-design-lite/material.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/swiper/dist/js/swiper.min.js",
-              "./node_modules/chart.js/dist/Chart.js"
+              "./node_modules/chart.js/dist/Chart.js",
+              "./node_modules/material-design-lite/material.min.js"
             ]
           },
           "configurations": {

@@ -52,8 +52,10 @@
 
 .f2h-card-item {
   display: inline-block;
-  margin-right: 5px; 
+  margin-right: 8px; 
   margin-top: 5px;
+  width: 220px !important;
+  height: 220px !important;
 }
 .f2h-card-item:last-child {
   margin-right: 0;   
@@ -62,7 +64,8 @@
 // Upto Small screen
 @media (max-width:340px) {
   .f2h-card-item {
-    width: 120px;
+    width: 110px !important;
+    height: 110px !important;
     margin-right: 10px; 
     margin-top: 10px;
   }
@@ -71,23 +74,25 @@
 // From: Small screen To: Medium screen
 @media (min-width:341px) and (max-width:600px) {
   .f2h-card-item {
-    width: 140px;
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
-// From: Medium screen To: Big screen
- @media (min-width:601px) and (max-width: 1550px) {
-   .f2h-card-item {
-     width: 200px;
-   }
-}
+// // From: Medium screen To: Big screen
+//  @media (min-width:601px) and (max-width: 1550px) {
+//    .f2h-card-item {
+//     width: 230px !important;
+//     height: 230px !important;
+//    }
+// }
 
-// On bigger Screen
-@media (min-width:1551px){
-  .f2h-card-item {
-    width: 280px;
-  }
-}
+// // On bigger Screen
+// @media (min-width:1551px){
+//   .f2h-card-item {
+//     width: 280px;
+//   }
+// }
 
 .f2h-home-category-container {
   margin: 30px 10px;
@@ -116,5 +121,40 @@
 @media (max-width:340px) {
   .f2h-cat-viewall {
     margin-right: 5px;
+  }
+}
+
+.ant-card-cover {
+  height: 170px !important;
+}
+
+.f2h-card-item-image {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+}
+
+.mdl-card--expand{
+  height: 130px !important;
+}
+
+// From: Small screen To: Medium screen
+@media (max-width:600px) {
+  .mdl-card--expand{
+    height: 100px !important;
+  }
+}
+
+// From: Small screen To: Medium screen
+@media (min-width:341px) and (max-width:600px) {
+  .mdl-card--expand{
+    height: 110px !important;
   }
 }
