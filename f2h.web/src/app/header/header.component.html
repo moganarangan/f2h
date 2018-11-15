@@ -4,21 +4,20 @@
 
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
     <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium f2h-menu-bars" (click)="w3_open()">
-      <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+      <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
     </a>
 
     <div class="f2h-menu-card">
-      <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+      <a href="#home" class="w3-bar-item w3-button w3-wide">F2H</a>
 
       <app-search></app-search>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small f2h-menubar-right">
-        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#team" class="w3-bar-item w3-button">TEAM</a>
-        <a href="#work" class="w3-bar-item w3-button">WORK</a>
-        <a href="#pricing" class="w3-bar-item w3-button">PRICING</a>
-        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+        <a href="#about" class="w3-bar-item w3-button">My Profile</a>
+        <a href="#team" class="w3-bar-item w3-button">Login / Signup</a>
+        <a href="#work" class="w3-bar-item w3-button">Categories</a>
+        <a href="#pricing" class="w3-bar-item w3-button">Cart</a>
       </div>
     </div>
   </div>
@@ -29,9 +28,8 @@
   <a (click)="w3_close()" class="w3-bar-item w3-button w3-padding-16 w3-right f2h-menu-close">
     <fa-icon [icon]="['fas', 'times']"></fa-icon>
   </a>
-  <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#about" class="w3-bar-item w3-button">My Profile</a>
+  <a href="#team" class="w3-bar-item w3-button">Login / Signup</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Categories</a>
+  <a href="#contact" class="w3-bar-item w3-button">Cart</a>
 </div>
