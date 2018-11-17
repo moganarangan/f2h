@@ -36,7 +36,6 @@ a {
 
 .w3-top {
   top: 0;
-  margin: 0 0 10px 0;
   height: 55px;
   background-color: #4caf50 !important;
 }
@@ -228,4 +227,17 @@ a {
   .f2h-menubar-title2 {
     display: inline-block;
   }
+}
+
+.f2h-menu-category {
+  top: 0;
+  margin: 0px 0 20px 0;
+  background-color: #4caf50 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.f2h-menu-cat-item {
+  padding: 0 20px;
 }
