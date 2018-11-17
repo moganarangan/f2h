@@ -8,16 +8,13 @@
     </a>
 
     <div class="f2h-menu-card">
-      <a href="#home" class="w3-bar-item w3-button w3-wide">F2H</a>
-
+      <a href="#home" class="w3-bar-item w3-button w3-wide f2h-menubar-title1">Farm2SweetHome</a>
+      <a href="#home" class="w3-bar-item w3-button w3-wide f2h-menubar-title2">F2H</a>
       <app-search></app-search>
-
       <!-- Right-sided navbar links -->
-      <div class="w3-right w3-hide-small f2h-menubar-right">
-        <a href="#about" class="w3-bar-item w3-button">My Profile</a>
-        <a href="#team" class="w3-bar-item w3-button">Login / Signup</a>
-        <a href="#work" class="w3-bar-item w3-button">Categories</a>
-        <a href="#pricing" class="w3-bar-item w3-button">Cart</a>
+      <div class="w3-right">
+        <a href="#team" class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'sign-in-alt']" size="lg"></fa-icon> <span class="f2h-menubar-login"> Login / Signup</span></a>
+        <a href="#pricing" class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'shopping-cart']" size="lg"></fa-icon></a>
       </div>
     </div>
   </div>
@@ -30,6 +27,6 @@
   </a>
   <a href="#about" class="w3-bar-item w3-button">My Profile</a>
   <a href="#team" class="w3-bar-item w3-button">Login / Signup</a>
-  <a href="#pricing" class="w3-bar-item w3-button">Categories</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Shop by Categories</a>
   <a href="#contact" class="w3-bar-item w3-button">Cart</a>
 </div>
