@@ -11,12 +11,40 @@
     </mdb-breadcrumb-item>
   </mdb-breadcrumb>
 
-  <div class="mdl-grid border mb-4">
-    <div class="mdl-cell mdl-cell--6-col border-right">
-      Product Image
+  <div class="mdl-grid mb-4">
+    <div class="mdl-cell mdl-cell--6-col">
+      <img src="assets/detail.jpg" class="f2h-prod-image" alt="some image">
     </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      Product Details
+    <div class="mdl-cell mdl-cell--6-col">
+      <h3>Kodak 'Brownie' Flash B Camera</h3>
+      <div>
+        <ul class="f2h-rating">
+          <li>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+          </li>
+          <li>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+          </li>
+          <li>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+          </li>
+          <li>
+            <fa-icon [icon]="['fas', 'star-half-alt']"></fa-icon>
+          </li>
+          <li>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h4>Rs. 500</h4>
+      <div>
+        <p>
+          Sattur Kara Sevu comes from a small town sattur in virudhunagar district of Tamilnadu. Made from  Channa dal flour, rice flour,garlic, chillies, cumin seeds, pepper seeds into a thick dough and then fried in oil using murukku  moulds.. Its so crispy that it will become your all time favourite tea snack.
+        </p>
+      </div>
+      <hr />
+      <button routerLink="/view-cart" mdbBtn type="button" class="btn-success" size="sm">Add to Cart</button>
     </div>
   </div>
 </div>
