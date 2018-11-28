@@ -1,0 +1,36 @@
+.f2h-cart-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.f2h-cart-item {
+  padding: 20px;
+  font-size: 30px;
+  border: 1px solid #fff;
+  background-color: #80cbc4;
+}
+
+
+.f2h-cart-container2 {
+  display: grid;
+  grid-template-columns: 20% 70% auto;
+  padding: 5px;
+}
+
+.f2h-cart-item2 {
+  background-color: greenyellow;
+}
+
+.f2h-cart-item3 {
+  background-color: blueviolet;
+}
+
+.f2h-cart-item4 {
+  text-align: right;
+  padding-right: 5px;
+  background-color: orangered;
+}
+
+.list-unstyled {
+  text-align: right;
+}
