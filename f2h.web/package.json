@@ -8,11 +8,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "preinstall": "npm install -g @angular/cli",
+    "postinstall": "ng build",
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
