@@ -13,6 +13,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 // Import Ngx-Components
 import { AlertModule } from 'ngx-bootstrap';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 // Import Swiper module
 import { SwiperModule } from 'ngx-swiper-wrapper';
@@ -59,7 +60,8 @@ library.add(fab, far, fas);
     NgZorroAntdModule,
     MDBBootstrapModule.forRoot(),
     AlertModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
