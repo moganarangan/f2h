@@ -5,9 +5,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ViewcartComponent } from './viewcart/viewcart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'product-list', component: ProductListComponent },
   { path: 'product-detail', component: ProductDetailComponent },
   { path: 'view-cart', component: ViewcartComponent },

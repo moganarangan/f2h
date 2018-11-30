@@ -1,36 +1,32 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-card">
-
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
     <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium f2h-menu-bars" (click)="w3_open()">
       <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
     </a>
-
     <div class="f2h-menu-card">
-      <a href="#home" routerLink="/" class="w3-bar-item w3-button w3-wide f2h-menubar-title1">Farm2SweetHome</a>
-      <a href="#home" routerLink="/" class="w3-bar-item w3-button w3-wide f2h-menubar-title2">F2H</a>
+      <a routerLink="/" class="w3-bar-item w3-button w3-wide f2h-menubar-title1">Farm2SweetHome</a>
+      <a routerLink="/" class="w3-bar-item w3-button w3-wide f2h-menubar-title2">F2H</a>
       <app-search></app-search>
       <!-- Right-sided navbar links -->
       <div class="w3-right">
-        <a href="#team" class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'sign-in-alt']" size="lg"></fa-icon> <span class="f2h-menubar-login"> Login / Signup</span></a>
-        <a href="#pricing" class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'shopping-cart']" size="lg"></fa-icon></a>
+        <a routerLink="/login" class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'sign-in-alt']" size="lg"></fa-icon> <span class="f2h-menubar-login"> Login / Signup</span></a>
+        <a class="w3-bar-item w3-button"><fa-icon [icon]="['fas', 'shopping-cart']" size="lg"></fa-icon></a>
       </div>
     </div>
   </div>
 </div>
-
 <!-- Sidebar on small screens when clicking the menu icon -->
 <div class="w3-sidebar w3-bar-block w3-card w3-hide-medium w3-hide-large slider" [ngClass]="showSideBar ? 'opened' : 'closed'">
   <a (click)="w3_close()" class="w3-bar-item w3-button w3-padding-16 w3-right f2h-menu-close">
     <fa-icon [icon]="['fas', 'times']"></fa-icon>
   </a>
-  <a href="#about" class="w3-bar-item w3-button">My Profile</a>
-  <a href="#team" class="w3-bar-item w3-button">Login / Signup</a>
-  <a href="#pricing" class="w3-bar-item w3-button">Shop by Categories</a>
-  <a href="#contact" class="w3-bar-item w3-button">Cart</a>
+  <a class="w3-bar-item w3-button">My Profile</a>
+  <a class="w3-bar-item w3-button">Login / Signup</a>
+  <a class="w3-bar-item w3-button">Shop by Categories</a>
+  <a class="w3-bar-item w3-button">Cart</a>
 </div>
-
 <div class="f2h-menu-category">
   <span class="f2h-menu-cat-item">Shop by Category</span>
   <span class="f2h-menu-cat-item">Rice</span>
