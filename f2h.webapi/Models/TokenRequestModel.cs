@@ -1,4 +1,4 @@
-﻿namespace f2h.webapi.Models
+﻿namespace f2h.webapi.Helpers
 {
     public class TokenRequestModel
     {

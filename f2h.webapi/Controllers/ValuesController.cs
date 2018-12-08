@@ -1,7 +1,9 @@
-﻿using f2h.webapi.Interfaces;
+﻿using System.Collections.Generic;
+using f2h.webapi.Helpers;
+using f2h.webapi.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using Microsoft.Extensions.Options;
 
 namespace f2h.webapi.Controllers
 {
@@ -11,10 +13,12 @@ namespace f2h.webapi.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly AppSettings _appSettings;
 
-        public ValuesController(IUserService userService)
+        public ValuesController(IUserService userService, IOptions<AppSettings> appSettings)
         {
             _userService = userService;
+            _appSettings = appSettings.Value;
         }
 
         // GET api/values
@@ -23,7 +27,7 @@ namespace f2h.webapi.Controllers
         {
             var userName = _userService.GetCurrentUser();
 
-            return new string[] { "value1", "value2", userName };
+            return new string[] { "value1", "value2", userName, _appSettings.Test };
         }
 
         // GET api/values/5

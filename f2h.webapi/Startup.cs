@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿using f2h.webapi.Helpers;
 using f2h.webapi.Interfaces;
 using f2h.webapi.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -8,22 +8,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace fc.webapi
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Configure strongly typed settings objects
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+
+            // Configure JWT
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.F2hSecret));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -34,14 +44,12 @@ namespace fc.webapi
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "f2h.com",
-                        ValidAudience = "localhost:4200",
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MYF2HKEYWHICHISUSEDASSECRETKEY"))
+                        ValidIssuer = appSettings.Issuer.ToString(),
+                        ValidAudience = appSettings.Audience.ToString(),
+                        IssuerSigningKey = key
                     };
                 });
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddHttpContextAccessor();
             services.AddTransient<IUserService, UserService>();
         }

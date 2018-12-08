@@ -1,11 +1,12 @@
-﻿using f2h.webapi.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using f2h.webapi.Helpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace f2h.webapi.Controllers
 {
@@ -13,6 +14,13 @@ namespace f2h.webapi.Controllers
     [ApiController]
     public class TokenController : ControllerBase
     {
+        private readonly AppSettings _appSettings;
+
+        public TokenController(IOptions<AppSettings> appSettings)
+        {
+            _appSettings = appSettings.Value;
+        }
+
         [AllowAnonymous]
         [HttpPost]
         public IActionResult RequestToken([FromBody]TokenRequestModel request)
@@ -24,12 +32,12 @@ namespace f2h.webapi.Controllers
                     new Claim(ClaimTypes.Name, request.UserName)
                 };
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MYF2HKEYWHICHISUSEDASSECRETKEY"));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.F2hSecret));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var token = new JwtSecurityToken(
-                    issuer: "f2h.com",
-                    audience: "localhost:4200",
+                    issuer: _appSettings.Issuer.ToString(),
+                    audience: _appSettings.Audience.ToString(),
                     claims: claims,
                     expires: DateTime.Now.AddMinutes(30),
                     signingCredentials: creds);
