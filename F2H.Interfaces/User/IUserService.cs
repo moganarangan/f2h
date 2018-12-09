@@ -1,4 +1,4 @@
-﻿namespace f2h.webapi.Interfaces
+﻿namespace F2H.Interfaces.User
 {
     public interface IUserService
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using f2h.webapi.Helpers;
-using f2h.webapi.Interfaces;
+using F2H.Interfaces.User;
+using F2H.Models.Configuration;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

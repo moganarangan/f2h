@@ -1,7 +1,7 @@
-﻿using f2h.webapi.Interfaces;
+﻿using F2H.Interfaces.User;
 using Microsoft.AspNetCore.Http;
 
-namespace f2h.webapi.Services
+namespace F2H.Core.User
 {
     public class UserService : IUserService
     {

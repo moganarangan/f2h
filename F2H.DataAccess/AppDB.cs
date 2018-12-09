@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 
-namespace F2H.MySqlConnector
+namespace F2H.DataAccess
 {
     public class AppDb : IDisposable
     {

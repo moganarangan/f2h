@@ -6,15 +6,27 @@
 /out-tsc
 
 # dependencies
-/f2h.web/node_modules
-/f2h.web/dist
-/f2h.web/tmp
-/f2h.web/out-tsc
-/f2h.web/obj
-/f2h.web/package-lock.json
+/F2H.Web/node_modules
+/F2H.Web/dist
+/F2H.Web/tmp
+/F2H.Web/out-tsc
+/F2H.Web/obj
+/F2H.Web/package-lock.json
 
-/f2h.webapi/obj
-/f2h.webapi/bin
+/F2H.WebApi/obj
+/F2H.WebApi/bin
+
+/F2H.Models/obj
+/F2H.Models/bin
+
+/F2H.Core/obj
+/F2H.Core/bin
+
+/F2H.DataAccess/obj
+/F2H.DataAccess/bin
+
+/F2H.Interfaces/obj
+/F2H.Interfaces/bin
 
 # IDEs and editors
 /.idea

@@ -1,6 +1,7 @@
-﻿using F2H.MySqlConnector;
+﻿using F2H.Interfaces.Image;
+using F2H.Models.Image;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+using System;
 
 namespace f2h.webapi.Controllers
 {
@@ -8,26 +9,18 @@ namespace f2h.webapi.Controllers
     [ApiController]
     public class ImageController : ControllerBase
     {
-        // Get Image by Image Id and Table
-        [HttpGet("{tableName}/{id}")]
-        public async Task<ActionResult<string>> GetAsync()
+        private readonly IImageService _imageService;
+
+        public ImageController(IImageService imageService)
         {
-            using (var db = new AppDb())
-            {
-                await db.Connection.OpenAsync();
+            _imageService = imageService;
+        }
 
-                var cmd = db.Connection.CreateCommand();
-                cmd.CommandText = @"SELECT * FROM HOME_BANNER;";
-                var result = cmd.ExecuteReaderAsync().Result;
-                var name = string.Empty;
-
-                while (await result.ReadAsync())
-                {
-                    name = await result.GetFieldValueAsync<string>(1);
-                }
-
-                return new OkObjectResult(name);
-            }
+        // Get Image by Image Id and Table
+        [HttpGet("{tableName}/{imageId}")]
+        public ActionResult<ImageResponseModel> GetImageByTableAndId(string tableName, string ImageId)
+        {
+            return _imageService.GetImageByTableAndId(tableName, new Guid(ImageId));
         }
 
         // Save Image
