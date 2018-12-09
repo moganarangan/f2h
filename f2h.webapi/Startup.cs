@@ -1,8 +1,5 @@
-﻿using F2H.Core.Image;
-using F2H.Core.User;
-using F2H.Interfaces.Image;
-using F2H.Interfaces.User;
-using F2H.Models.Configuration;
+﻿using F2H.Models.Configuration;
+using F2H.WebApi.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,8 +50,7 @@ namespace fc.webapi
                 });
 
             services.AddHttpContextAccessor();
-            services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IImageService, ImageService>();
+            services.RegisterServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
