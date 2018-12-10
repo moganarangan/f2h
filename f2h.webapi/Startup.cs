@@ -1,4 +1,5 @@
-﻿using F2H.Models.Configuration;
+﻿using System.Text;
+using F2H.Models.Configuration;
 using F2H.WebApi.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -7,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace fc.webapi
 {

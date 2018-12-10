@@ -4,6 +4,6 @@
     {
         public string Caption { get; set; }
 
-        public byte Image { get; set; }
+        public byte? Image { get; set; }
     }
 }

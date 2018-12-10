@@ -27,7 +27,7 @@ namespace f2h.webapi.Controllers
         {
             var userName = _userService.GetCurrentUser();
 
-            return new string[] { "value1", "value2", userName, _appSettings.Test };
+            return new string[] { "value1", "value2", userName };
         }
 
         // GET api/values/5

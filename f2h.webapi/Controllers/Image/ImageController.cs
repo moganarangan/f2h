@@ -1,7 +1,7 @@
-﻿using F2H.Interfaces.Image;
+﻿using System;
+using F2H.Interfaces.Image;
 using F2H.Models.Image;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace f2h.webapi.Controllers
 {
