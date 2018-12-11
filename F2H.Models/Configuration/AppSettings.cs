@@ -12,5 +12,6 @@
     public class DBConnection
     {
         public string DefaultConnection { get; set; }
+        public int CommandTimeOut { get; set; }
     }
 }

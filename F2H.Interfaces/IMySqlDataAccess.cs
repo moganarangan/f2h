@@ -8,13 +8,18 @@ namespace F2H.Interfaces
     public interface IMySqlDataAccess : IDisposable
     {
         MySqlConnection Connection { get; }
+        MySqlTransaction Transaction { get; set; }
+        int CommandTimeOut { get; }
 
-        DataTable GetData(string sql, Dictionary<string, object> parameters);
+        void BeginTransaction();
+        void CommitTransaction();
+        void RollbackTransaction();
 
-        // List<DataTable> GetDataTables(string sql, Dictionary<string, object> parameters);
-
-        // DataSet GetDataFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
-
-        // void ExecuteNonQuery(string sql, Dictionary<string, object> parameters);
+        DataTable GetData(string query, Dictionary<string, object> parameters);
+        DataTable GetData(string query, string tableName, Dictionary<string, object> parameters);
+        DataSet GetDataset(string query, Dictionary<string, object> parameters);
+        DataSet GetDataFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
+        void ExecuteNonQuery(string query, Dictionary<string, object> parameters);
+        void ExecuteNonQueryFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
     }
 }
