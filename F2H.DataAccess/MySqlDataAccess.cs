@@ -96,6 +96,21 @@ namespace F2H.DataAccess
             }
         }
 
+        public object ExecuteScalar(string query, Dictionary<string, object> parameters)
+        {
+            using (var command = new MySqlCommand(query, Connection, Transaction))
+            {
+                command.Connection.Open();
+                command.CommandTimeout = CommandTimeOut;
+
+                AddParameters(command, parameters);
+
+                var result = command.ExecuteScalar();
+
+                return result;
+            }
+        }
+
         public void ExecuteNonQuery(string query, Dictionary<string, object> parameters)
         {
             ExecuteNonQuery(query, parameters, CommandType.Text);
@@ -108,7 +123,7 @@ namespace F2H.DataAccess
 
         private void ExecuteNonQuery(string query, Dictionary<string, object> parameters, CommandType commandType)
         {
-            using (var command = new MySqlCommand(query, Connection))
+            using (var command = new MySqlCommand(query, Connection, Transaction))
             {
                 command.Connection.Open();
                 command.CommandTimeout = CommandTimeOut;

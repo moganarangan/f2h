@@ -63,9 +63,11 @@
     <TypeScriptCompile Include="src\app\header\header.component.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\models\home-banner-model.ts" />
     <TypeScriptCompile Include="src\app\product-detail\product-detail.component.ts" />
     <TypeScriptCompile Include="src\app\product-list\product-list.component.ts" />
     <TypeScriptCompile Include="src\app\search\search.component.ts" />
+    <TypeScriptCompile Include="src\app\services\home.service.ts" />
     <TypeScriptCompile Include="src\app\viewcart\viewcart.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
@@ -88,9 +90,11 @@
     <Folder Include="src\app\header\" />
     <Folder Include="src\app\home\" />
     <Folder Include="src\app\login\" />
+    <Folder Include="src\app\models\" />
     <Folder Include="src\app\product-detail\" />
     <Folder Include="src\app\product-list\" />
     <Folder Include="src\app\search\" />
+    <Folder Include="src\app\services\" />
     <Folder Include="src\app\viewcart\" />
     <Folder Include="src\assets" />
     <Folder Include="src\assets\Logo\" />

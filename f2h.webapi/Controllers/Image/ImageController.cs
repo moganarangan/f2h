@@ -20,9 +20,16 @@ namespace f2h.webapi.Controllers
 
         // Get Image by Image Id and Table
         [HttpGet("{tableName}/{imageId}")]
-        public ActionResult<ImageResponseModel> GetImageByTableAndId(string tableName, string ImageId)
+        public ActionResult<ImageResponseModel> GetImageByTableAndId(string tableName, string imageId)
         {
-            return _imageService.GetImageByTableAndId(tableName, new Guid(ImageId));
+            return _imageService.GetImageByTableAndId(tableName, new Guid(imageId));
+        }
+
+        // Get Image by Image Id and Table
+        [HttpGet("homebanner/{imageId}")]
+        public ActionResult<byte[]> Get(string imageId)
+        {
+            return _imageService.GetHomeBannerImage(new Guid(imageId));
         }
 
         // Save Image

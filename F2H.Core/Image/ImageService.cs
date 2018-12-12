@@ -35,6 +35,17 @@ namespace F2H.Core.Image
             return response;
         }
 
+
+        public byte[] GetHomeBannerImage(Guid imageId)
+        {
+            var query = string.Format("SELECT IMAGE FROM HOME_BANNER WHERE HOME_BANNER_ID = '{0}'", imageId);
+            var queryParams = new Dictionary<string, object>();
+
+            var result = _mySqlDataAccess.ExecuteScalar(query, queryParams);
+
+            return (byte[])result;
+        }
+
         public string SaveImage(string tableName, byte[] image, string fileName, int position, bool active)
         {
             var newId = Guid.NewGuid();

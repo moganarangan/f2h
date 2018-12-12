@@ -19,6 +19,7 @@ namespace F2H.DataAccess.Interfaces
         DataTable GetData(string query, string tableName, Dictionary<string, object> parameters);
         DataSet GetDataset(string query, Dictionary<string, object> parameters);
         DataSet GetDataFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
+        object ExecuteScalar(string query, Dictionary<string, object> parameters);
         void ExecuteNonQuery(string query, Dictionary<string, object> parameters);
         void ExecuteNonQueryFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
     }

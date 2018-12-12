@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LoginComponent } from './login/login.component';
+import { HomeService } from './services/home.service';
 
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
@@ -55,6 +57,7 @@ library.add(fab, far, fas);
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgSelectModule,
     FontAwesomeModule,
@@ -65,7 +68,7 @@ library.add(fab, far, fas);
     BsDatepickerModule.forRoot(),
     AccordionModule.forRoot()
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

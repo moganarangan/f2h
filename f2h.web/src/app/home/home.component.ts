@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { HomeService } from '../services/home.service';
+import HomeBanner from '../models/home-banner-model';
 
 @Component({
   selector: 'app-home',
@@ -24,9 +26,19 @@ export class HomeComponent implements OnInit {
     }
   };
 
-  constructor() { }
+  private homeBannerList: Array<HomeBanner>;
+
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    this.loadHomeBanner();
+  }
+
+  loadHomeBanner = () => {
+    this.homeService.getHomeBanner().subscribe(
+      data => this.homeBannerList = data,
+      error => console.log(error)
+    );
   }
 
 }

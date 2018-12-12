@@ -1,13 +1,7 @@
 <div class="swiper-container" [swiper]="sliderConfig">
   <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="assets/road220058.jpg" class="f2h-slide-image">
-    </div>
-    <div class="swiper-slide">
-      <img src="assets/road220058.jpg" class="f2h-slide-image">
-    </div>
-    <div class="swiper-slide">
-      <img src="assets/road220058.jpg" class="f2h-slide-image">
+    <div class="swiper-slide" *ngFor="let item of homeBannerList">
+      <img src="https://localhost:44369/api/image/homebanner/{{item.bannerId}}" class="f2h-slide-image">
     </div>
   </div>
   <div class="swiper-pagination"></div>
