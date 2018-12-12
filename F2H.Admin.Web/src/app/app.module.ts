@@ -28,12 +28,19 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminNavComponent } from './admin-nav/admin-nav.component';
+
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminHomeComponent,
+    AdminHeaderComponent,
+    AdminNavComponent
   ],
   imports: [
     BrowserModule,

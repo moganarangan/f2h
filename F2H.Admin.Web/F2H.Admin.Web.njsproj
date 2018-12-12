@@ -23,6 +23,13 @@
   <ItemGroup>
     <Content Include="angular.json" />
     <Content Include="package.json" />
+    <Content Include="src\app\admin-header\admin-header.component.html" />
+    <Content Include="src\app\admin-header\admin-header.component.scss" />
+    <Content Include="src\app\admin-home\admin-home.component.html" />
+    <Content Include="src\app\admin-home\admin-home.component.scss" />
+    <Content Include="src\app\admin-nav\admin-nav.component.html" />
+    <Content Include="src\app\admin-nav\admin-nav.component.scss" />
+    <Content Include="src\styles.scss" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="README.md" />
@@ -31,6 +38,9 @@
     <Content Include="src\favicon.ico" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tslint.json" />
+    <TypeScriptCompile Include="src\app\admin-header\admin-header.component.ts" />
+    <TypeScriptCompile Include="src\app\admin-home\admin-home.component.ts" />
+    <TypeScriptCompile Include="src\app\admin-nav\admin-nav.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
@@ -51,6 +61,9 @@
     <Folder Include="e2e\src" />
     <Folder Include="src" />
     <Folder Include="src\app" />
+    <Folder Include="src\app\admin-header\" />
+    <Folder Include="src\app\admin-home\" />
+    <Folder Include="src\app\admin-nav\" />
     <Folder Include="src\assets" />
     <Folder Include="src\assets\Logo" />
     <Folder Include="src\environments" />
