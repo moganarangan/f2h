@@ -13,6 +13,13 @@
 /F2H.Web/obj
 /F2H.Web/package-lock.json
 
+/F2H.Admin.Web/node_modules
+/F2H.Admin.Web/dist
+/F2H.Admin.Web/tmp
+/F2H.Admin.Web/out-tsc
+/F2H.Admin.Web/obj
+/F2H.Admin.Web/package-lock.json
+
 /F2H.WebApi/obj
 /F2H.WebApi/bin
 

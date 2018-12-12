@@ -5,15 +5,17 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2H.WebApi", "f2h.webapi\F2H.WebApi.csproj", "{3171564C-B3B8-4C5E-A768-E7EE1CFFAFEA}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "f2h.web", "f2h.web\F2H.Web.njsproj", "{60D6FEC4-4815-4F00-B690-88E0965A9BAF}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "F2H.Web", "f2h.web\F2H.Web.njsproj", "{60D6FEC4-4815-4F00-B690-88E0965A9BAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F2H.Models", "f2h.models\F2H.Models.csproj", "{54CFE3A3-A431-454F-8E9C-4C62A28E3A2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2H.Models", "f2h.models\F2H.Models.csproj", "{54CFE3A3-A431-454F-8E9C-4C62A28E3A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F2H.Core", "f2h.core\F2H.Core.csproj", "{4C575F36-8B68-4D99-86C9-68B8FE566E5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2H.Core", "f2h.core\F2H.Core.csproj", "{4C575F36-8B68-4D99-86C9-68B8FE566E5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F2H.DataAccess", "f2h.dataaccess\F2H.DataAccess.csproj", "{14A07F1C-92E5-4FC9-B6A9-0C5800536ED8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2H.DataAccess", "f2h.dataaccess\F2H.DataAccess.csproj", "{14A07F1C-92E5-4FC9-B6A9-0C5800536ED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F2H.Interfaces", "f2h.interfaces\F2H.Interfaces.csproj", "{8CA56FA1-C196-4FAA-B5D0-F513D4FD2676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2H.Interfaces", "f2h.interfaces\F2H.Interfaces.csproj", "{8CA56FA1-C196-4FAA-B5D0-F513D4FD2676}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "F2H.Admin.Web", "F2H.Admin.Web\F2H.Admin.Web.njsproj", "{A21A0E94-77AB-45B3-9198-6FA4BCEF179F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8CA56FA1-C196-4FAA-B5D0-F513D4FD2676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CA56FA1-C196-4FAA-B5D0-F513D4FD2676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CA56FA1-C196-4FAA-B5D0-F513D4FD2676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21A0E94-77AB-45B3-9198-6FA4BCEF179F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21A0E94-77AB-45B3-9198-6FA4BCEF179F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21A0E94-77AB-45B3-9198-6FA4BCEF179F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21A0E94-77AB-45B3-9198-6FA4BCEF179F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
