@@ -21,20 +21,37 @@ namespace F2H.Core.Image
         {
             var response = new ImageResponseModel { };
 
-            var sql = "SELECT * FROM HOME_BANNER";
-            var sqlParams = new Dictionary<string, object>();
+            var query = string.Format("SELECT CAPTION, IMAGE FROM {0} WHERE {0}_ID = '{1}'", tableName, imageId);
+            var queryParams = new Dictionary<string, object>();
 
-            var result = _mySqlDataAccess.GetData(sql, sqlParams);
+            var result = _mySqlDataAccess.GetData(query, queryParams);
 
             if (result.Rows.Count > 0)
             {
-                response.Caption = result.AsEnumerable().FirstOrDefault().Field<string>(1);
-
-                var image = result.AsEnumerable().FirstOrDefault().Field<byte?>(2);
-                response.Image = image;
+                response.Caption = result.AsEnumerable().FirstOrDefault().Field<string>(0);
+                response.Image = result.AsEnumerable().FirstOrDefault().Field<byte[]>(1);
             }
 
             return response;
+        }
+
+        public string SaveImage(string tableName, byte[] image, string fileName, int position, bool active)
+        {
+            var newId = Guid.NewGuid();
+
+            var query = string.Format("INSERT INTO {0}({0}_ID, CAPTION, IMAGE, POSITION, ACTIVE) VALUES (@{0}_ID, @CAPTION, @IMAGE, @POSITION, @ACTIVE)", tableName);
+            var queryParams = new Dictionary<string, object>
+            {
+                { "HOME_BANNER_ID", newId.ToString() },
+                { "CAPTION", fileName },
+                { "IMAGE", image },
+                { "POSITION", position },
+                { "ACTIVE", active }
+            };
+
+            _mySqlDataAccess.ExecuteNonQuery(query, queryParams);
+
+            return "Image saved.";
         }
     }
 }

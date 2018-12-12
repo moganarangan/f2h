@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using F2H.Interfaces.Image;
 using F2H.Models.Image;
 using Microsoft.AspNetCore.Http;
@@ -29,10 +30,13 @@ namespace f2h.webapi.Controllers
         [HttpPost("{tableName}")]
         public ActionResult<string> SaveImage(string tableName, IFormFile file)
         {
-            var saveFile = file;
-            var t = tableName;
+            var stream = file.OpenReadStream();
+            var reader = new BinaryReader(stream);
+            var fileByte = reader.ReadBytes((int)file.Length);
 
-            return Ok("success");
+            var result = _imageService.SaveImage(tableName, fileByte, file.FileName, 1, true);
+
+            return Ok(result);
         }
     }
 }

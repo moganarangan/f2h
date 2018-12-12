@@ -108,8 +108,9 @@ namespace F2H.DataAccess
 
         private void ExecuteNonQuery(string query, Dictionary<string, object> parameters, CommandType commandType)
         {
-            using (var command = new MySqlCommand(query, Connection, Transaction))
+            using (var command = new MySqlCommand(query, Connection))
             {
+                command.Connection.Open();
                 command.CommandTimeout = CommandTimeOut;
                 command.CommandType = commandType;
 
