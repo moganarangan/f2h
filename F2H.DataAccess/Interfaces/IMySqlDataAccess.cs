@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-namespace F2H.Interfaces
+namespace F2H.DataAccess.Interfaces
 {
     public interface IMySqlDataAccess : IDisposable
     {

@@ -1,3 +1,15 @@
 <p>
   admin-home works!
+
+  <br />
+  <br />
+
+  <label *ngIf="selectedFile">{{selectedFile.name}}</label>
+  <input style="display: none"
+         type="file" (change)="onFileChanged($event)"
+         accept="image/png, image/jpeg"
+         #fileInput>
+  <button *ngIf="!selectedFile" (click)="fileInput.click()">Select File</button>
+  <button *ngIf="selectedFile" (click)="onUpload()">Upload!</button>
+
 </p>

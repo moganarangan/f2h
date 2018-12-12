@@ -1,6 +1,7 @@
 ﻿using System;
 using F2H.Interfaces.Image;
 using F2H.Models.Image;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace f2h.webapi.Controllers
@@ -24,5 +25,14 @@ namespace f2h.webapi.Controllers
         }
 
         // Save Image
+        // POST: api/Image
+        [HttpPost("{tableName}")]
+        public ActionResult<string> SaveImage(string tableName, IFormFile file)
+        {
+            var saveFile = file;
+            var t = tableName;
+
+            return Ok("success");
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using F2H.Core.Image;
 using F2H.Core.User;
 using F2H.DataAccess;
-using F2H.Interfaces;
+using F2H.DataAccess.Interfaces;
 using F2H.Interfaces.Image;
 using F2H.Interfaces.User;
 using Microsoft.Extensions.DependencyInjection;
