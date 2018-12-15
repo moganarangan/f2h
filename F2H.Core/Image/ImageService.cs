@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using F2H.DataAccess.Interfaces;
 using F2H.Interfaces.Image;
 using F2H.Models.Image;
@@ -35,18 +36,17 @@ namespace F2H.Core.Image
             return response;
         }
 
-
-        public byte[] GetHomeBannerImage(Guid imageId)
+        public async Task<byte[]> GetHomeBannerImage(Guid imageId)
         {
             var query = string.Format("SELECT IMAGE FROM HOME_BANNER WHERE HOME_BANNER_ID = '{0}'", imageId);
             var queryParams = new Dictionary<string, object>();
 
-            var result = _mySqlDataAccess.ExecuteScalar(query, queryParams);
+            var result = await _mySqlDataAccess.ExecuteScalarAsync(query, queryParams);
 
             return (byte[])result;
         }
 
-        public string SaveImage(string tableName, byte[] image, string fileName, int position, bool active)
+        public async Task<string> SaveImage(string tableName, byte[] image, string fileName, int position, bool active)
         {
             var newId = Guid.NewGuid();
 
@@ -60,7 +60,7 @@ namespace F2H.Core.Image
                 { "ACTIVE", active }
             };
 
-            _mySqlDataAccess.ExecuteNonQuery(query, queryParams);
+            await _mySqlDataAccess.ExecuteNonQueryAsync(query, queryParams);
 
             return "Image saved.";
         }

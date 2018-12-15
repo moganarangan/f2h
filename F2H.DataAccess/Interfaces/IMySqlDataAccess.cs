@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace F2H.DataAccess.Interfaces
@@ -20,7 +21,10 @@ namespace F2H.DataAccess.Interfaces
         DataSet GetDataset(string query, Dictionary<string, object> parameters);
         DataSet GetDataFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
         object ExecuteScalar(string query, Dictionary<string, object> parameters);
+        Task<object> ExecuteScalarAsync(string query, Dictionary<string, object> parameters);
         void ExecuteNonQuery(string query, Dictionary<string, object> parameters);
+        Task ExecuteNonQueryAsync(string query, Dictionary<string, object> parameters);
         void ExecuteNonQueryFromStoredProcedure(string procedureName, Dictionary<string, object> parameters);
+        Task ExecuteNonQueryFromStoredProcedureAsync(string procedureName, Dictionary<string, object> parameters);
     }
 }

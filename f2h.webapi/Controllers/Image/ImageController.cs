@@ -1,8 +1,10 @@
 ﻿using System;
-using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using F2H.Interfaces.Image;
 using F2H.Models.Image;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace f2h.webapi.Controllers
@@ -27,23 +29,28 @@ namespace f2h.webapi.Controllers
 
         // Get Image by Image Id and Table
         [HttpGet("homebanner/{imageId}")]
-        public ActionResult<byte[]> Get(string imageId)
+        public async Task<HttpResponseMessage> Get(string imageId)
         {
-            return _imageService.GetHomeBannerImage(new Guid(imageId));
+            var result = await _imageService.GetHomeBannerImage(new Guid(imageId));
+
+            var response = new HttpResponseMessage
+            {
+                Content = new ByteArrayContent(result),
+                StatusCode = HttpStatusCode.OK,
+            };
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+
+            return response;
         }
 
         // Save Image
         // POST: api/Image
         [HttpPost("{tableName}")]
-        public ActionResult<string> SaveImage(string tableName, IFormFile file)
+        public async Task<string> SaveImage(string tableName, [FromBody]ImagePostModel imagePostModel)
         {
-            var stream = file.OpenReadStream();
-            var reader = new BinaryReader(stream);
-            var fileByte = reader.ReadBytes((int)file.Length);
+            var result = await _imageService.SaveImage(tableName, imagePostModel.Content, imagePostModel.ImageName, 1, true);
 
-            var result = _imageService.SaveImage(tableName, fileByte, file.FileName, 1, true);
-
-            return Ok(result);
+            return result;
         }
     }
 }

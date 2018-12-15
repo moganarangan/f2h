@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using F2H.Models.Image;
 
 namespace F2H.Interfaces.Image
@@ -7,8 +8,8 @@ namespace F2H.Interfaces.Image
     {
         ImageResponseModel GetImageByTableAndId(string tableName, Guid imageId);
 
-        string SaveImage(string tableName, byte[] image, string fileName, int position, bool active);
+        Task<string> SaveImage(string tableName, byte[] image, string fileName, int position, bool active);
 
-        byte[] GetHomeBannerImage(Guid imageId);
+        Task<byte[]> GetHomeBannerImage(Guid imageId);
     }
 }

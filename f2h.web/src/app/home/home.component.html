@@ -1,63 +1,17 @@
 <div class="swiper-container" [swiper]="sliderConfig">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let item of homeBannerList">
-      <img src="https://localhost:44369/api/image/homebanner/{{item.bannerId}}" class="f2h-slide-image">
+      <img [src]="https://localhost:44369/api/image/homebanner/{{item.bannerId}}" alt="item.caption" class="f2h-slide-image">
     </div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
-
 
 <div class="f2h-home-category-container">
   <div class="f2h-home-category-heading">
     <h3 class="f2h-cat-heading">Category 1</h3>
     <button routerLink="/product-list" mdbBtn type="button" class="f2h-cat-viewall btn-success" size="sm">View all</button>
   </div>
- 
-  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
-    <div class="mdl-card--expand">
-      <img alt="example" src="assets/JiqGstEfoWAOHiTxclqi.png" class="f2h-card-item-image" />
-    </div>
-    <div class="mdl-card__supporting-text">
-      Brand
-      Name
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Updates
-      </a>
-    </div>
-  </div>
-  
-  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
-    <div class="mdl-card--expand">
-      <img alt="example" src="assets/Capture.JPG" class="f2h-card-item-image" />
-    </div>
-    <div class="mdl-card__supporting-text">
-      Brand
-      Name
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Updates
-      </a>
-    </div>
-  </div>
-  
-  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
-    <div class="mdl-card--expand">
-      <img alt="example" src="assets/download.jpg" class="f2h-card-item-image" />
-    </div>
-    <div class="mdl-card__supporting-text">
-      Brand
-      Name
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Updates
-      </a>
-    </div>
-  </div>
 
   <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
@@ -73,7 +27,51 @@
       </a>
     </div>
   </div>
-  
+
+  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
+    <div class="mdl-card--expand">
+      <img alt="example" src="assets/Capture.JPG" class="f2h-card-item-image" />
+    </div>
+    <div class="mdl-card__supporting-text">
+      Brand
+      Name
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View Updates
+      </a>
+    </div>
+  </div>
+
+  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
+    <div class="mdl-card--expand">
+      <img alt="example" src="assets/download.jpg" class="f2h-card-item-image" />
+    </div>
+    <div class="mdl-card__supporting-text">
+      Brand
+      Name
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View Updates
+      </a>
+    </div>
+  </div>
+  <div routerLink="/product-detail" class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
+    <div class="mdl-card--expand">
+      <img alt="example" src="assets/JiqGstEfoWAOHiTxclqi.png" class="f2h-card-item-image" />
+    </div>
+    <div class="mdl-card__supporting-text">
+      Brand
+      Name
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View Updates
+      </a>
+    </div>
+  </div>
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/Capture.JPG" class="f2h-card-item-image" />
@@ -88,7 +86,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/download.jpg" class="f2h-card-item-image" />
@@ -103,9 +101,8 @@
       </a>
     </div>
   </div>
-  
+
 </div>
-
 <div class="f2h-home-category-container">
   <div class="f2h-home-category-heading">
     <h3 class="f2h-cat-heading">Category 2</h3>
@@ -125,7 +122,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/Capture.JPG" class="f2h-card-item-image" />
@@ -140,7 +137,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/download.jpg" class="f2h-card-item-image" />
@@ -155,7 +152,6 @@
       </a>
     </div>
   </div>
-
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/JiqGstEfoWAOHiTxclqi.png" class="f2h-card-item-image" />
@@ -170,7 +166,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/Capture.JPG" class="f2h-card-item-image" />
@@ -185,7 +181,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="demo-card-square mdl-card mdl-shadow--2dp f2h-card-item">
     <div class="mdl-card--expand">
       <img alt="example" src="assets/download.jpg" class="f2h-card-item-image" />
@@ -200,5 +196,4 @@
       </a>
     </div>
   </div>
-
 </div>

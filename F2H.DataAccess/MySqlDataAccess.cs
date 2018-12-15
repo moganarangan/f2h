@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 using F2H.DataAccess.Interfaces;
 using F2H.Models.Configuration;
 using Microsoft.Extensions.Options;
@@ -111,6 +112,21 @@ namespace F2H.DataAccess
             }
         }
 
+        public async Task<object> ExecuteScalarAsync(string query, Dictionary<string, object> parameters)
+        {
+            using (var command = new MySqlCommand(query, Connection, Transaction))
+            {
+                command.Connection.Open();
+                command.CommandTimeout = CommandTimeOut;
+
+                AddParameters(command, parameters);
+
+                var result = await command.ExecuteScalarAsync();
+
+                return result;
+            }
+        }
+
         public void ExecuteNonQuery(string query, Dictionary<string, object> parameters)
         {
             ExecuteNonQuery(query, parameters, CommandType.Text);
@@ -132,6 +148,30 @@ namespace F2H.DataAccess
                 AddParameters(command, parameters);
 
                 command.ExecuteNonQuery();
+            }
+        }
+
+        public async Task ExecuteNonQueryAsync(string query, Dictionary<string, object> parameters)
+        {
+            await ExecuteNonQueryAsync(query, parameters, CommandType.Text);
+        }
+
+        public async Task ExecuteNonQueryFromStoredProcedureAsync(string procedureName, Dictionary<string, object> parameters)
+        {
+            await ExecuteNonQueryAsync(procedureName, parameters, CommandType.StoredProcedure);
+        }
+
+        private async Task ExecuteNonQueryAsync(string query, Dictionary<string, object> parameters, CommandType commandType)
+        {
+            using (var command = new MySqlCommand(query, Connection, Transaction))
+            {
+                command.Connection.Open();
+                command.CommandTimeout = CommandTimeOut;
+                command.CommandType = commandType;
+
+                AddParameters(command, parameters);
+
+                await command.ExecuteNonQueryAsync();
             }
         }
 
