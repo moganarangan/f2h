@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
+using System.IO;
 using System.Threading.Tasks;
 using F2H.Interfaces.Image;
 using F2H.Models.Image;
@@ -29,16 +27,12 @@ namespace f2h.webapi.Controllers
 
         // Get Image by Image Id and Table
         [HttpGet("homebanner/{imageId}")]
-        public async Task<HttpResponseMessage> Get(string imageId)
+        public async Task<FileStreamResult> Get(string imageId)
         {
-            var result = await _imageService.GetHomeBannerImage(new Guid(imageId));
-
-            var response = new HttpResponseMessage
-            {
-                Content = new ByteArrayContent(result),
-                StatusCode = HttpStatusCode.OK,
-            };
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+            var imageByte = await _imageService.GetHomeBannerImage(new Guid(imageId));
+            var ms = new MemoryStream(imageByte);
+            var contentType = "image/jpeg";
+            var response = new FileStreamResult(ms, contentType);
 
             return response;
         }

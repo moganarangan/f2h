@@ -38,6 +38,7 @@ import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LoginComponent } from './login/login.component';
 import { HomeService } from './services/home.service';
+import { ImageWidgetComponent } from './image-widget/image-widget.component';
 
 // Add the fontawesome icons to the fontawesome library so we can use it in any component
 library.add(fab, far, fas);
@@ -53,7 +54,8 @@ library.add(fab, far, fas);
     FooterComponent,
     SearchComponent,
     ProductListComponent,
-    LoginComponent
+    LoginComponent,
+    ImageWidgetComponent
   ],
   imports: [
     BrowserModule,

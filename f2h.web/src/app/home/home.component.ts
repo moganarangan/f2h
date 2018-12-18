@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
     spaceBetween: 30,
     centeredSlides: true,
     loop: true,
+    preloadImages: true,
+    updateOnImagesReady: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,

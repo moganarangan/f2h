@@ -1,7 +1,7 @@
 <div class="swiper-container" [swiper]="sliderConfig">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let item of homeBannerList">
-      <img [src]="https://localhost:44369/api/image/homebanner/{{item.bannerId}}" alt="item.caption" class="f2h-slide-image">
+      <app-image-widget [src]="'https://localhost:44369/api/image/homebanner/'+item.bannerId" [caption]="item.caption" [imageClass]="'f2h-slide-image'"></app-image-widget>
     </div>
   </div>
   <div class="swiper-pagination"></div>
